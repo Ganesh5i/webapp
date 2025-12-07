@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ZenBite Food Ordering Design System */
+
+@layer base {
+  :root {
+    /* Warm, appetizing color palette */
+    --background: 0 0% 100%;
+    --foreground: 20 14% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 10%;
+
+    /* Primary: Warm Orange for food appeal */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 25 95% 48%;
+
+    /* Secondary: Fresh Green accent */
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 142 76% 31%;
+
+    /* Muted backgrounds */
+    --muted: 30 40% 97%;
+    --muted-foreground: 20 14% 40%;
+
+    /* Accent for CTAs */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 20% 90%;
+    --input: 20 20% 90%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 199 89% 48%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(15 95% 58%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 76% 36%), hsl(152 76% 41%));
+    --gradient-warm: linear-gradient(180deg, hsl(30 40% 97%), hsl(0 0% 100%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 0 20px hsl(25 95% 53% / 0.3);
+
+    /* Transitions */
+    --transition-base: all 0.2s ease;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 20 14% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 20 14% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 20 14% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 25 95% 48%;
+
+    --secondary: 142 76% 36%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 142 76% 31%;
+
+    --muted: 20 14% 15%;
+    --muted-foreground: 20 10% 60%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 14% 20%;
+    --input: 20 14% 20%;
+    --ring: 25 95% 53%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(15 95% 58%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 76% 36%), hsl(152 76% 41%));
+    --gradient-warm: linear-gradient(180deg, hsl(20 14% 12%), hsl(20 14% 10%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  /* Custom animations */
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
