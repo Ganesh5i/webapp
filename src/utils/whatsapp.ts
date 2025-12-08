@@ -12,7 +12,7 @@ export const DELIVERY_FEE = 40;
 export const buildWhatsAppUrl = (
   cart: CartItem[],
   customer: CustomerDetails,
-  restaurantNumber: string = '91XXXXXXXXXX'
+  restaurantNumber: string = '919876543210'
 ): string => {
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const total = subtotal + DELIVERY_FEE;

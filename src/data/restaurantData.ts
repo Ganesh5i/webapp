@@ -22,6 +22,9 @@ export interface Restaurant {
   rating: number;
   cuisine: string;
   deliveryTime: string;
+  phoneNumber: string;
+  address: string;
+  owner: string;
 }
 
 export interface MenuItem {
@@ -41,7 +44,10 @@ export const restaurants: Restaurant[] = [
     image: pizzaPalace,
     rating: 4.5,
     cuisine: "Italian, Pizza",
-    deliveryTime: "25-30 min"
+    deliveryTime: "25-30 min",
+    phoneNumber: "919876543210",
+    address: "123 Main Street, Downtown, City - 560001",
+    owner: "Marco Rossi"
   },
   {
     id: "burger-hub",
@@ -49,7 +55,10 @@ export const restaurants: Restaurant[] = [
     image: burgerHub,
     rating: 4.3,
     cuisine: "American, Burgers",
-    deliveryTime: "20-25 min"
+    deliveryTime: "20-25 min",
+    phoneNumber: "919876543211",
+    address: "456 Food Court, Central Plaza, City - 560002",
+    owner: "John Smith"
   },
   {
     id: "spice-garden",
@@ -57,7 +66,10 @@ export const restaurants: Restaurant[] = [
     image: spiceGarden,
     rating: 4.6,
     cuisine: "Indian, North Indian",
-    deliveryTime: "30-35 min"
+    deliveryTime: "30-35 min",
+    phoneNumber: "919876543212",
+    address: "789 Spice Lane, Old Market, City - 560003",
+    owner: "Rajesh Kumar"
   },
   {
     id: "dragon-wok",
@@ -65,7 +77,10 @@ export const restaurants: Restaurant[] = [
     image: dragonWok,
     rating: 4.4,
     cuisine: "Chinese, Asian",
-    deliveryTime: "25-30 min"
+    deliveryTime: "25-30 min",
+    phoneNumber: "919876543213",
+    address: "321 Asian Avenue, East Side, City - 560004",
+    owner: "Li Wei"
   },
   {
     id: "sweet-treats",
@@ -73,7 +88,10 @@ export const restaurants: Restaurant[] = [
     image: sweetTreats,
     rating: 4.7,
     cuisine: "Desserts, Bakery",
-    deliveryTime: "15-20 min"
+    deliveryTime: "15-20 min",
+    phoneNumber: "919876543214",
+    address: "654 Dessert Street, Sweet Corner, City - 560005",
+    owner: "Sarah Johnson"
   },
   {
     id: "cafe-mocha",
@@ -81,7 +99,10 @@ export const restaurants: Restaurant[] = [
     image: cafeMocha,
     rating: 4.2,
     cuisine: "Cafe, Beverages",
-    deliveryTime: "15-20 min"
+    deliveryTime: "15-20 min",
+    phoneNumber: "919876543215",
+    address: "987 Coffee Road, Brew District, City - 560006",
+    owner: "David Brown"
   }
 ];
 

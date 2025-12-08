@@ -6,7 +6,7 @@ import CategoryFilter from '@/components/CategoryFilter';
 import ProductCard from '@/components/ProductCard';
 import Cart from '@/components/Cart';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, ArrowLeft, Star } from 'lucide-react';
+import { ShoppingCart, ArrowLeft, Star, MapPin, User, Phone } from 'lucide-react';
 
 const Restaurant = () => {
   const { id } = useParams<{ id: string }>();
@@ -93,6 +93,46 @@ const Restaurant = () => {
                 <div className="bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium">
                   {restaurant.deliveryTime}
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Restaurant Info Section */}
+      <div className="bg-background border-b border-border">
+        <div className="container mx-auto px-4 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Address */}
+            <div className="flex items-start gap-3">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <MapPin className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-1">Address</p>
+                <p className="text-sm font-semibold text-foreground">{restaurant.address}</p>
+              </div>
+            </div>
+
+            {/* Owner */}
+            <div className="flex items-start gap-3">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <User className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-1">Owner</p>
+                <p className="text-sm font-semibold text-foreground">{restaurant.owner}</p>
+              </div>
+            </div>
+
+            {/* Phone Number */}
+            <div className="flex items-start gap-3">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <Phone className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-1">Phone</p>
+                <p className="text-sm font-semibold text-foreground">{restaurant.phoneNumber}</p>
               </div>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { ArrowLeft, Copy, MessageCircle } from 'lucide-react';
 import { buildWhatsAppUrl, copyOrderText, CustomerDetails } from '@/utils/whatsapp';
+import { getRestaurantById } from '@/data/restaurantData';
 import { toast } from 'sonner';
 import {
   AlertDialog,
@@ -71,7 +72,12 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ onBack, onClose }) => {
     }
 
     try {
-      const whatsappUrl = buildWhatsAppUrl(cart, customer);
+      // Get restaurant ID from cart items (all items should be from the same restaurant)
+      const restaurantId = cart.length > 0 ? cart[0].restaurantId : null;
+      const restaurant = restaurantId ? getRestaurantById(restaurantId) : null;
+      const restaurantNumber = restaurant?.phoneNumber || '919876543210'; // Fallback to default number
+      
+      const whatsappUrl = buildWhatsAppUrl(cart, customer, restaurantNumber);
       
       // Try to open WhatsApp
       const newWindow = window.open(whatsappUrl, '_blank');

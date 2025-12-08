@@ -58,31 +58,36 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
-        {/* Hero Section */}
-        <div className="text-center mb-10 space-y-4 animate-fade-in">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-            Hungry? We've got you <span className="text-primary">covered</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Order from your favorite restaurants and get food delivered to your doorstep
-          </p>
-          
-          {/* Search */}
-          <div className="max-w-md mx-auto mt-6">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <Input
-                type="text"
-                placeholder="Search restaurants or cuisines..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 h-12 rounded-full border-border bg-card shadow-sm"
-              />
+      {/* Hero Section with Black Background */}
+      <section className="bg-black text-white py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10 space-y-4 animate-fade-in">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+              Hungry? We've got you <span className="text-primary">covered</span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Order from your favorite restaurants and get food delivered to your doorstep
+            </p>
+            
+            {/* Search */}
+            <div className="max-w-md mx-auto mt-6">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Input
+                  type="text"
+                  placeholder="Search restaurants or cuisines..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-12 h-12 rounded-full border-gray-700 bg-gray-900 text-white placeholder:text-gray-400 shadow-sm"
+                />
+              </div>
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-8">
 
         {/* Restaurants Section */}
         <div className="animate-slide-up">
