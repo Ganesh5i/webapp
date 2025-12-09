@@ -6,7 +6,10 @@ import chocolateBrownie from '@/assets/food/chocolate-brownie.jpg';
 import cappuccino from '@/assets/food/cappuccino.jpg';
 import pepperoniPizza from '@/assets/food/pepperoni-pizza.jpg';
 import biryani from '@/assets/food/biryani.jpg';
-
+import veggieSupreme from '@/assets/food/Veggie-Supreme.jpg';
+import CheeseGarlicBread from '@/assets/food/CheeseGarlicBread.jpg';
+import CocaCola from '@/assets/food/CocaCola.jpg';
+import Onionrings from '@/assets/food/Onionrings.jpg';
 // Hotel / restaurant hero images
 import pizzaPalace from '@/assets/hotels/pizza-palace.jpg.jpg';
 import burgerHub from '@/assets/hotels/burger-hub.jpg.jpg';
@@ -132,7 +135,7 @@ export const menuItems: MenuItem[] = [
     description: "Bell peppers, onions, olives, mushrooms, and sweet corn",
     price: 349,
     category: "Pizzas",
-    image: "/placeholder.svg",
+    image: veggieSupreme,
     restaurantId: "pizza-palace"
   },
   {
@@ -141,7 +144,7 @@ export const menuItems: MenuItem[] = [
     description: "Toasted bread with garlic butter and herbs",
     price: 119,
     category: "Sides",
-    image: "/placeholder.svg",
+    image: CheeseGarlicBread,
     restaurantId: "pizza-palace"
   },
   {
@@ -150,7 +153,7 @@ export const menuItems: MenuItem[] = [
     description: "Chilled 500ml bottle",
     price: 49,
     category: "Drinks",
-    image: "/placeholder.svg",
+    image: CocaCola,
     restaurantId: "pizza-palace"
   },
 
@@ -170,7 +173,7 @@ export const menuItems: MenuItem[] = [
     description: "Double cheese, beef patty, pickles, and mayo",
     price: 229,
     category: "Burgers",
-    image: "/placeholder.svg",
+    image: chickenBurger,
     restaurantId: "burger-hub"
   },
   {
@@ -179,7 +182,7 @@ export const menuItems: MenuItem[] = [
     description: "Spicy paneer patty with onions and mint sauce",
     price: 159,
     category: "Burgers",
-    image: "/placeholder.svg",
+    image: chickenBurger,
     restaurantId: "burger-hub"
   },
   {
@@ -188,7 +191,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy golden fries with ketchup",
     price: 99,
     category: "Sides",
-    image: "/placeholder.svg",
+    image: CheeseGarlicBread,
     restaurantId: "burger-hub"
   },
   {
@@ -197,7 +200,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy fried onion rings with dipping sauce",
     price: 129,
     category: "Sides",
-    image: "/placeholder.svg",
+    image: Onionrings,
     restaurantId: "burger-hub"
   },
 
@@ -217,7 +220,7 @@ export const menuItems: MenuItem[] = [
     description: "Grilled paneer in spiced tomato gravy",
     price: 269,
     category: "Main Course",
-    image: "/placeholder.svg",
+    image: butterChicken,
     restaurantId: "spice-garden"
   },
   {
@@ -235,7 +238,7 @@ export const menuItems: MenuItem[] = [
     description: "Soft leavened bread baked in tandoor",
     price: 49,
     category: "Breads",
-    image: "/placeholder.svg",
+    image: CheeseGarlicBread,
     restaurantId: "spice-garden"
   },
   {
@@ -244,7 +247,7 @@ export const menuItems: MenuItem[] = [
     description: "Thick and creamy mango yogurt drink",
     price: 89,
     category: "Drinks",
-    image: "/placeholder.svg",
+    image: cappuccino,
     restaurantId: "spice-garden"
   },
 
@@ -264,7 +267,7 @@ export const menuItems: MenuItem[] = [
     description: "Deep-fried vegetable balls in tangy sauce",
     price: 169,
     category: "Starters",
-    image: "/placeholder.svg",
+    image: hakkaNoodles,
     restaurantId: "dragon-wok"
   },
   {
@@ -273,7 +276,7 @@ export const menuItems: MenuItem[] = [
     description: "Wok-tossed rice with vegetables and eggs",
     price: 179,
     category: "Rice",
-    image: "/placeholder.svg",
+    image: biryani,
     restaurantId: "dragon-wok"
   },
   {
@@ -282,7 +285,7 @@ export const menuItems: MenuItem[] = [
     description: "Crispy rolls stuffed with vegetables",
     price: 129,
     category: "Starters",
-    image: "/placeholder.svg",
+    image: hakkaNoodles,
     restaurantId: "dragon-wok"
   },
 
@@ -302,7 +305,7 @@ export const menuItems: MenuItem[] = [
     description: "Traditional Indian sweet (2 pieces)",
     price: 79,
     category: "Desserts",
-    image: "/placeholder.svg",
+    image: chocolateBrownie,
     restaurantId: "sweet-treats"
   },
   {
@@ -311,7 +314,7 @@ export const menuItems: MenuItem[] = [
     description: "Thick chocolate milkshake with whipped cream",
     price: 119,
     category: "Shakes",
-    image: "/placeholder.svg",
+    image: cappuccino,
     restaurantId: "sweet-treats"
   },
   {
@@ -320,7 +323,7 @@ export const menuItems: MenuItem[] = [
     description: "Slice of rich red velvet with cream cheese frosting",
     price: 149,
     category: "Cakes",
-    image: "/placeholder.svg",
+    image: chocolateBrownie,
     restaurantId: "sweet-treats"
   },
 
@@ -340,7 +343,7 @@ export const menuItems: MenuItem[] = [
     description: "Cold brew coffee with ice and milk",
     price: 99,
     category: "Coffee",
-    image: "/placeholder.svg",
+    image: cappuccino,
     restaurantId: "cafe-mocha"
   },
   {
@@ -349,7 +352,7 @@ export const menuItems: MenuItem[] = [
     description: "Refreshing lime soda with mint",
     price: 69,
     category: "Beverages",
-    image: "/placeholder.svg",
+    image: CocaCola,
     restaurantId: "cafe-mocha"
   },
   {
@@ -358,7 +361,7 @@ export const menuItems: MenuItem[] = [
     description: "Grilled vegetable sandwich with cheese",
     price: 139,
     category: "Snacks",
-    image: "/placeholder.svg",
+    image: CheeseGarlicBread,
     restaurantId: "cafe-mocha"
   }
 ];
