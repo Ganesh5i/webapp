@@ -18,10 +18,24 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const { getItemCount } = useCart();
 
-  const filteredRestaurants = restaurants.filter(restaurant =>
-    restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    restaurant.cuisine.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const searchLower = searchQuery.toLowerCase().trim();
+  const searchWords = searchLower.split(/\s+/).filter(word => word.length > 0);
+  
+  const filteredRestaurants = searchLower.length === 0 
+    ? restaurants
+    : restaurants.filter(restaurant => {
+        const restaurantText = `${restaurant.name} ${restaurant.cuisine} ${restaurant.address}`.toLowerCase();
+        // Match if all search words are found in the restaurant text
+        return searchWords.every(word => restaurantText.includes(word));
+      });
+
+  const filteredFoodItems = searchLower.length === 0
+    ? []
+    : menuItems.filter(item => {
+        const itemText = `${item.name} ${item.description} ${item.category}`.toLowerCase();
+        // Match if all search words are found in the item text
+        return searchWords.every(word => itemText.includes(word));
+      });
 
   const itemCount = getItemCount();
 
@@ -75,7 +89,7 @@ const Index = () => {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <Input
                   type="text"
-                  placeholder="Search restaurants or cuisines..."
+                  placeholder="Search restaurants, foods, or cuisines..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-12 h-12 rounded-full border-gray-700 bg-gray-900 text-white placeholder:text-gray-400 shadow-sm"
@@ -90,26 +104,42 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
 
         {/* Restaurants Section */}
-        <div className="animate-slide-up">
-          <h3 className="font-display text-2xl font-bold text-foreground mb-6">
-            {searchQuery ? 'Search Results' : 'All Restaurants'}
-          </h3>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredRestaurants.map((restaurant) => (
-              <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-            ))}
-          </div>
-
-          {filteredRestaurants.length === 0 && (
-            <div className="text-center py-20">
-              <p className="text-muted-foreground text-lg">No restaurants found matching "{searchQuery}"</p>
+        {(!searchQuery || filteredRestaurants.length > 0) && (
+          <div className="animate-slide-up">
+            <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+              {searchQuery ? 'Restaurants' : 'All Restaurants'}
+            </h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredRestaurants.map((restaurant) => (
+                <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+              ))}
             </div>
-          )}
-        </div>
 
-        {/* Best Food Options Section */}
-        {!searchQuery && (
+            {searchQuery && filteredRestaurants.length === 0 && (
+              <div className="text-center py-10">
+                <p className="text-muted-foreground">No restaurants found matching "{searchQuery}"</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Food Items Section */}
+        {searchQuery ? (
+          filteredFoodItems.length > 0 && (
+            <div className={`mt-8 animate-slide-up ${filteredRestaurants.length > 0 ? 'mt-12' : ''}`}>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+                Food Items
+              </h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {filteredFoodItems.map((item) => (
+                  <ProductCard key={item.id} item={item} showActions={true} />
+                ))}
+              </div>
+            </div>
+          )
+        ) : (
           <div className="mt-16 animate-slide-up">
             <h3 className="font-display text-2xl font-bold text-foreground mb-6">
               Our Best Food Options
@@ -120,6 +150,14 @@ const Index = () => {
                 <ProductCard key={item.id} item={item} showActions={false} />
               ))}
             </div>
+          </div>
+        )}
+
+        {/* No Results Message */}
+        {searchQuery && filteredRestaurants.length === 0 && filteredFoodItems.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-muted-foreground text-lg">No results found matching "{searchQuery}"</p>
+            <p className="text-muted-foreground text-sm mt-2">Try searching for restaurants, food items, or cuisines</p>
           </div>
         )}
       </main>
