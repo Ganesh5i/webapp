@@ -30,6 +30,12 @@ import spiceGarden from '@/assets/hotels/spice-garden.jpg.jpg';
 import dragonWok from '@/assets/hotels/dragon-wok.jpg.jpg';
 import sweetTreats from '@/assets/hotels/sweet-treats.jpg.jpg';
 import cafeMocha from '@/assets/hotels/cafe-mocha.jpg.jpg';
+import h1 from '@/assets/hotels/h1.jpeg';
+import h2 from '@/assets/hotels/h2.jpg';
+import h3 from '@/assets/hotels/h3.jpeg';
+import h4 from '@/assets/hotels/h4.jpeg';
+import h5 from '@/assets/hotels/h5.jpeg';
+import h6 from '@/assets/hotels/h6.jpeg';
 
 export interface Restaurant {
   id: string;
@@ -55,75 +61,75 @@ export interface MenuItem {
 
 export const restaurants: Restaurant[] = [
   {
-    id: "pizza-palace",
+    id: "Shawk",
     name: "Shawk",
-    image: pizzaPalace,
+    image: h1,
     rating: 4.5,
     cuisine: "Italian, Pizza",
     deliveryTime: "25-30 min",
-    phoneNumber: "919876543210",
-    address: "Shop No. 12, Connaught Place, New Delhi - 110001",
+    phoneNumber: "8075561821",
+    address: "Near Law Gate LPU, Maheru, Phagwara, Punjab 144411, India.",
     owner: "Marco Rossi"
   },
   {
-    id: "burger-hub",
+    id: "Shaheen Restauran",
     name: "Shaheen Restaurant",
-    image: burgerHub,
+    image: h2,
     rating: 4.3,
     cuisine: "American, Burgers",
     deliveryTime: "20-25 min",
-    phoneNumber: "919876543211",
-    address: "Ground Floor, Khan Market, New Delhi - 110003",
+    phoneNumber: "9041905063",
+    address: "Near Law Gate LPU, Maheru, Phagwara, Punjab 144411, India.",
     owner: "John Smith"
   },
   {
-    id: "spice-garden",
+    id: "Kerala Cusine Hut",
     name: "Kerala Cusine Hut",
-    image: spiceGarden,
+    image: h3,
     rating: 4.6,
     cuisine: "Indian, North Indian",
     deliveryTime: "30-35 min",
-    phoneNumber: "919876543212",
-    address: "Block A, Lajpat Nagar, New Delhi - 110024",
+    phoneNumber: "8558991081",
+    address: "Near Law Gate LPU, Maheru, Phagwara, Punjab 144411, India.",
     owner: "Rajesh Kumar"
   },
   {
-    id: "dragon-wok",
+    id: "Majlis Restaurent & Cafe",
     name: " Majlis Restaurent & Cafe",
-    image: dragonWok,
+    image: h4,
     rating: 4.4,
     cuisine: "Chinese, Asian",
     deliveryTime: "25-30 min",
-    phoneNumber: "919876543213",
-    address: "Main Road, Karol Bagh, New Delhi - 110005",
+    phoneNumber: "8592020511",
+    address: "Near Law Gate LPU, Maheru, Phagwara, Punjab 144411, India.",
     owner: "Li Wei"
   },
   {
-    id: "sweet-treats",
+    id: "Flame & Flavour",
     name: " Flame & Flavour",
-    image: sweetTreats,
+    image: h5,
     rating: 4.7,
     cuisine: "Desserts, Bakery",
     deliveryTime: "15-20 min",
-    phoneNumber: "919876543214",
-    address: "Sector 18, Noida, Delhi NCR - 201301",
+    phoneNumber: "7505334931",
+    address: " Near Law Gate LPU, Maheru, Phagwara, Punjab 144411, India.",
     owner: "Sarah Johnson"
   },
   {
-    id: "cafe-mocha",
+    id: "The Urban Oven",
     name: "The Urban Oven",
-    image: cafeMocha,
+    image: h6,
     rating: 4.2,
     cuisine: "Cafe, Beverages",
     deliveryTime: "15-20 min",
-    phoneNumber: "919876543215",
-    address: "DLF Cyber Hub, Gurgaon, Delhi NCR - 122002",
+    phoneNumber: "9657200029",
+    address: "Near Law Gate LPU, Maheru, Phagwara, Punjab 144411, India.",
     owner: "David Brown"
   }
 ];
 
 export const menuItems: MenuItem[] = [
-  // Pizza Palace
+  // Shawk
   {
     id: "pp-1",
     name: "Classic Shawaya",
@@ -131,7 +137,7 @@ export const menuItems: MenuItem[] = [
     price: 160,
     category: "Pizzas",
     image: pp1,
-    restaurantId: "pizza-palace"
+    restaurantId: "Shawk"
   },
   {
     id: "pp-2",
@@ -140,7 +146,7 @@ export const menuItems: MenuItem[] = [
     price: 170,
     category: "Pizzas",
     image: pp2,
-    restaurantId: "pizza-palace"
+    restaurantId: "Shawk"
   },
   {
     id: "pp-3",
@@ -149,7 +155,7 @@ export const menuItems: MenuItem[] = [
     price: 399,
     category: "Pizzas",
     image: pepperoniPizza,
-    restaurantId: "pizza-palace"
+    restaurantId: "Shawk"
   },
   {
     id: "pp-4",
@@ -158,7 +164,7 @@ export const menuItems: MenuItem[] = [
     price: 349,
     category: "Pizzas",
     image: veggieSupreme,
-    restaurantId: "pizza-palace"
+    restaurantId: "Shawk"
   },
   {
     id: "pp-5",
@@ -167,7 +173,7 @@ export const menuItems: MenuItem[] = [
     price: 119,
     category: "Sides",
     image: CheeseGarlicBread,
-    restaurantId: "pizza-palace"
+    restaurantId: "Shawk"
   },
   {
     id: "pp-6",
@@ -176,7 +182,7 @@ export const menuItems: MenuItem[] = [
     price: 49,
     category: "Drinks",
     image: CocaCola,
-    restaurantId: "pizza-palace"
+    restaurantId: "Shawk"
   },
 
   // Burger Hub
@@ -187,7 +193,7 @@ export const menuItems: MenuItem[] = [
     price: 129,
     category: "Burgers",
     image: pp3,
-    restaurantId: "burger-hub"
+    restaurantId: "Shaheen Restauran"
   },
   {
     id: "bh-2",
@@ -196,7 +202,7 @@ export const menuItems: MenuItem[] = [
     price: 179,
     category: "Burgers",
     image: pp4,
-    restaurantId: "burger-hub"
+    restaurantId: "Shaheen Restauran"
   },
   
   {
@@ -206,7 +212,7 @@ export const menuItems: MenuItem[] = [
     price: 179,
     category: "Burgers",
     image: chickenBurger,
-    restaurantId: "burger-hub"
+    restaurantId: "Shaheen Restauran"
   },
   {
     id: "bh-4",
@@ -215,7 +221,7 @@ export const menuItems: MenuItem[] = [
     price: 229,
     category: "Burgers",
     image: pp5,
-    restaurantId: "burger-hub"
+    restaurantId: "Shaheen Restauran"
   },
   {
     id: "bh-5",
@@ -224,7 +230,7 @@ export const menuItems: MenuItem[] = [
     price: 159,
     category: "Burgers",
     image: chickenBurger,
-    restaurantId: "burger-hub"
+    restaurantId: "Shaheen Restauran"
   },
   {
     id: "bh-6",
@@ -233,7 +239,7 @@ export const menuItems: MenuItem[] = [
     price: 99,
     category: "Sides",
     image: CheeseGarlicBread,
-    restaurantId: "burger-hub"
+    restaurantId: "Shaheen Restauran"
   },
   {
     id: "bh-7",
@@ -242,7 +248,7 @@ export const menuItems: MenuItem[] = [
     price: 129,
     category: "Sides",
     image: Onionrings,
-    restaurantId: "burger-hub"
+    restaurantId: "Shaheen Restauran"
   },
 
   // Spice Garden
@@ -253,7 +259,7 @@ export const menuItems: MenuItem[] = [
     price: 129,
     category: "Main Course",
     image: pp6,
-    restaurantId: "spice-garden"
+    restaurantId: "Kerala Cusine Hut"
   },
   {
     id: "sg-2",
@@ -262,7 +268,7 @@ export const menuItems: MenuItem[] = [
     price: 169,
     category: "Main Course",
     image: butterChicken,
-    restaurantId: "spice-garden"
+    restaurantId: "Kerala Cusine Hut"
   },
   {
     id: "sg-3",
@@ -271,7 +277,7 @@ export const menuItems: MenuItem[] = [
     price: 249,
     category: "Rice",
     image: biryani,
-    restaurantId: "spice-garden"
+    restaurantId: "Kerala Cusine Hut"
   },
   {
     id: "sg-4",
@@ -280,7 +286,7 @@ export const menuItems: MenuItem[] = [
     price: 49,
     category: "Breads",
     image: CheeseGarlicBread,
-    restaurantId: "spice-garden"
+    restaurantId: "Kerala Cusine Hut"
   },
   {
     id: "sg-5",
@@ -289,7 +295,7 @@ export const menuItems: MenuItem[] = [
     price: 89,
     category: "Drinks",
     image: cappuccino,
-    restaurantId: "spice-garden"
+    restaurantId: "Kerala Cusine Hut"
   },
 
   // Dragon Wok
@@ -300,7 +306,7 @@ export const menuItems: MenuItem[] = [
     price: 169,
     category: "Starters",
     image: pp7,
-    restaurantId: "dragon-wok"
+    restaurantId: "Majlis Restaurent & Cafe"
   },
   {
     id: "dw-2",
@@ -309,7 +315,7 @@ export const menuItems: MenuItem[] = [
     price: 189,
     category: "Noodles",
     image: hakkaNoodles,
-    restaurantId: "dragon-wok"
+    restaurantId: "Majlis Restaurent & Cafe"
   },
  
   {
@@ -319,7 +325,7 @@ export const menuItems: MenuItem[] = [
     price: 179,
     category: "Rice",
     image: biryani,
-    restaurantId: "dragon-wok"
+    restaurantId: "Majlis Restaurent & Cafe"
   },
   {
     id: "dw-4",
@@ -328,7 +334,7 @@ export const menuItems: MenuItem[] = [
     price: 129,
     category: "Starters",
     image: hakkaNoodles,
-    restaurantId: "dragon-wok"
+    restaurantId: "Majlis Restaurent & Cafe"
   },
 
   // Sweet Treats
@@ -339,7 +345,7 @@ export const menuItems: MenuItem[] = [
     price: 129,
     category: "Desserts",
     image: pp9,
-    restaurantId: "sweet-treats"
+    restaurantId: "Flame & Flavour"
   },
 
   {
@@ -349,7 +355,7 @@ export const menuItems: MenuItem[] = [
     price: 129,
     category: "Desserts",
     image: pp10,
-    restaurantId: "sweet-treats"
+    restaurantId: "Flame & Flavour"
   },
   {
     id: "st-3",
@@ -358,7 +364,7 @@ export const menuItems: MenuItem[] = [
     price: 79,
     category: "Desserts",
     image: pp8,
-    restaurantId: "sweet-treats"
+    restaurantId: "Flame & Flavour"
   },
   {
     id: "st-4",
@@ -367,7 +373,7 @@ export const menuItems: MenuItem[] = [
     price: 119,
     category: "Shakes",
     image: cappuccino,
-    restaurantId: "sweet-treats"
+    restaurantId: "Flame & Flavour"
   },
   {
     id: "st-5",
@@ -376,7 +382,7 @@ export const menuItems: MenuItem[] = [
     price: 149,
     category: "Cakes",
     image: chocolateBrownie,
-    restaurantId: "sweet-treats"
+    restaurantId: "Flame & Flavour"
   },
 
   // Cafe Mocha
@@ -387,7 +393,7 @@ export const menuItems: MenuItem[] = [
     price: 110,
     category: "Coffee",
     image: pp11,
-    restaurantId: "cafe-mocha"
+    restaurantId: "The Urban Oven"
   },
   {
     id: "cm-1",
@@ -396,7 +402,7 @@ export const menuItems: MenuItem[] = [
     price: 120,
     category: "Coffee",
     image: pp12,
-    restaurantId: "cafe-mocha"
+    restaurantId: "The Urban Oven"
   },
   {
     id: "cm-3",
@@ -405,7 +411,7 @@ export const menuItems: MenuItem[] = [
     price: 129,
     category: "Coffee",
     image: pp13,
-    restaurantId: "cafe-mocha"
+    restaurantId: "The Urban Oven"
   },
   {
     id: "cm-4",
@@ -414,7 +420,7 @@ export const menuItems: MenuItem[] = [
     price: 99,
     category: "Coffee",
     image: cappuccino,
-    restaurantId: "cafe-mocha"
+    restaurantId: "The Urban Oven"
   },
   {
     id: "cm-5",
@@ -423,7 +429,7 @@ export const menuItems: MenuItem[] = [
     price: 69,
     category: "Beverages",
     image: CocaCola,
-    restaurantId: "cafe-mocha"
+    restaurantId: "The Urban Oven"
   },
   {
     id: "cm-4",
@@ -432,7 +438,7 @@ export const menuItems: MenuItem[] = [
     price: 139,
     category: "Snacks",
     image: CheeseGarlicBread,
-    restaurantId: "cafe-mocha"
+    restaurantId: "The Urban Oven"
   }
 ];
 
