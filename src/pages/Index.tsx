@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 
 // Featured food items (best sellers from various restaurants)
 const bestFoodItems = menuItems.filter(item => 
-  ['pp-1', 'bh-1', 'sg-1', 'dw-1', 'st-1', 'cm-1', 'pp-2', 'sg-3'].includes(item.id)
+  ['shawk-1', 'shaheen-1', 'cusine-1', 'majlis-1', 'flame-1', 'urban-1', 'shawk-3', 'shaheen-7'].includes(item.id)
 );
 
 const Index = () => {
