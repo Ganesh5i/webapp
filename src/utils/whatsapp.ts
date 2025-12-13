@@ -7,7 +7,7 @@ export interface CustomerDetails {
   note?: string;
 }
 
-export const DELIVERY_FEE = 40;
+export const DELIVERY_FEE = 20;
 
 export const buildWhatsAppUrl = (
   cart: CartItem[],
@@ -19,7 +19,7 @@ export const buildWhatsAppUrl = (
   
   const timestamp = new Date().toISOString();
   
-  let message = `*ZenBite Order*\n`;
+  let message = `*Unieats Order*\n`;
   message += `Time: ${timestamp}\n`;
   message += `Customer: ${customer.name} | ${customer.phone}\n`;
   message += `Address: ${customer.address}\n\n`;
@@ -56,7 +56,7 @@ export const copyOrderText = (
   
   const timestamp = new Date().toISOString();
   
-  let message = `ZenBite Order\n`;
+  let message = `Unieats Order\n`;
   message += `Time: ${timestamp}\n`;
   message += `Customer: ${customer.name} | ${customer.phone}\n`;
   message += `Address: ${customer.address}\n\n`;

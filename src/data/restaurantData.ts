@@ -1,6 +1,23 @@
 // Food images - using placeholders until proper images are added
-// All food items will use placeholder.svg as temporary image
 const placeholderImage = "/placeholder.svg";
+
+// Food images
+import margheritaPizza from '@/assets/food/margherita-pizza.jpg';
+import pepperoniPizza from '@/assets/food/pepperoni-pizza.jpg';
+import veggieSupreme from '@/assets/food/Veggie-Supreme.jpg';
+import CheeseGarlicBread from '@/assets/food/CheeseGarlicBread.jpg';
+import CocaCola from '@/assets/food/CocaCola.jpg';
+import chickenBurger from '@/assets/food/chicken-burger.jpg';
+import butterChicken from '@/assets/food/butter-chicken.jpg';
+import biryani from '@/assets/food/biryani.jpg';
+import hakkaNoodles from '@/assets/food/hakka-noodles.jpg';
+import chocolateBrownie from '@/assets/food/chocolate-brownie.jpg';
+import cappuccino from '@/assets/food/cappuccino.jpg';
+import Onionrings from '@/assets/food/Onionrings.jpg';
+import pp5 from '@/assets/food/pp5.jpg';
+import pp13 from '@/assets/food/pp13.jpg';
+import pp8 from '@/assets/food/pp8.jpg';
+
 // Hotel / restaurant hero images
 import pizzaPalace from '@/assets/hotels/pizza-palace.jpg.jpg';
 import burgerHub from '@/assets/hotels/burger-hub.jpg.jpg';
@@ -107,7 +124,54 @@ export const restaurants: Restaurant[] = [
 ];
 
 export const menuItems: MenuItem[] = [
-  // 1. Shawk - 10 Items
+  // 1. Shawk (Pizza Palace items)
+  {
+    id: "pp-1",
+    name: "Margherita Pizza",
+    description: "Classic pizza with fresh mozzarella, basil, and tomato sauce",
+    price: 299,
+    category: "Pizzas",
+    image: margheritaPizza,
+    restaurantId: "Shawk"
+  },
+  {
+    id: "pp-2",
+    name: "Pepperoni Delight",
+    description: "Loaded with pepperoni, cheese, and Italian herbs",
+    price: 399,
+    category: "Pizzas",
+    image: pepperoniPizza,
+    restaurantId: "Shawk"
+  },
+  {
+    id: "pp-3",
+    name: "Veggie Supreme",
+    description: "Bell peppers, onions, olives, mushrooms, and sweet corn",
+    price: 349,
+    category: "Pizzas",
+    image: veggieSupreme,
+    restaurantId: "Shawk"
+  },
+  {
+    id: "pp-4",
+    name: "Garlic Bread",
+    description: "Toasted bread with garlic butter and herbs",
+    price: 119,
+    category: "Sides",
+    image: CheeseGarlicBread,
+    restaurantId: "Shawk"
+  },
+  {
+    id: "pp-5",
+    name: "Coca Cola",
+    description: "Chilled 500ml bottle",
+    price: 49,
+    category: "Drinks",
+    image: CocaCola,
+    restaurantId: "Shawk"
+  },
+
+  // 1. Shawk - Additional Items
   {
     id: "shawk-1",
     name: "Classic Chicken Shawarma",
@@ -199,7 +263,54 @@ export const menuItems: MenuItem[] = [
     restaurantId: "Shawk"
   },
 
-  // 2. Shaheen - 10 Items
+  // 2. Shaheen Restaurant (Burger Hub items)
+  {
+    id: "bh-1",
+    name: "Classic Chicken Burger",
+    description: "Crispy chicken patty with lettuce, tomato, and special sauce",
+    price: 179,
+    category: "Burgers",
+    image: chickenBurger,
+    restaurantId: "Shaheen Restauran"
+  },
+  {
+    id: "bh-2",
+    name: "Cheese Blast Burger",
+    description: "Double cheese, beef patty, pickles, and mayo",
+    price: 229,
+    category: "Burgers",
+    image: pp5,
+    restaurantId: "Shaheen Restauran"
+  },
+  {
+    id: "bh-3",
+    name: "Veg Paneer Burger",
+    description: "Spicy paneer patty with onions and mint sauce",
+    price: 159,
+    category: "Burgers",
+    image: placeholderImage,
+    restaurantId: "Shaheen Restauran"
+  },
+  {
+    id: "bh-4",
+    name: "French Fries",
+    description: "Crispy golden fries with ketchup",
+    price: 99,
+    category: "Sides",
+    image: placeholderImage,
+    restaurantId: "Shaheen Restauran"
+  },
+  {
+    id: "bh-5",
+    name: "Onion Rings",
+    description: "Crispy fried onion rings with dipping sauce",
+    price: 129,
+    category: "Sides",
+    image: Onionrings,
+    restaurantId: "Shaheen Restauran"
+  },
+
+  // 2. Shaheen - Additional Items
   {
     id: "shaheen-1",
     name: "Shaheen Grilled Chicken (Quarter)",
@@ -291,7 +402,54 @@ export const menuItems: MenuItem[] = [
     restaurantId: "Shaheen Restauran"
   },
 
-  // 3. Kerala Cusine Hut - 10 Items
+  // 3. Kerala Cusine Hut (Spice Garden items)
+  {
+    id: "sg-1",
+    name: "Butter Chicken",
+    description: "Creamy tomato-based curry with tender chicken",
+    price: 299,
+    category: "Main Course",
+    image: butterChicken,
+    restaurantId: "Kerala Cusine Hut"
+  },
+  {
+    id: "sg-2",
+    name: "Paneer Tikka Masala",
+    description: "Grilled paneer in spiced tomato gravy",
+    price: 269,
+    category: "Main Course",
+    image: placeholderImage,
+    restaurantId: "Kerala Cusine Hut"
+  },
+  {
+    id: "sg-3",
+    name: "Biryani",
+    description: "Fragrant basmati rice with aromatic spices and meat",
+    price: 249,
+    category: "Rice",
+    image: biryani,
+    restaurantId: "Kerala Cusine Hut"
+  },
+  {
+    id: "sg-4",
+    name: "Naan Bread",
+    description: "Soft leavened bread baked in tandoor",
+    price: 49,
+    category: "Breads",
+    image: CheeseGarlicBread,
+    restaurantId: "Kerala Cusine Hut"
+  },
+  {
+    id: "sg-5",
+    name: "Mango Lassi",
+    description: "Thick and creamy mango yogurt drink",
+    price: 89,
+    category: "Drinks",
+    image: placeholderImage,
+    restaurantId: "Kerala Cusine Hut"
+  },
+
+  // 3. Kerala Cusine Hut - Additional Items
   {
     id: "cusine-1",
     name: "Margherita Pizza",
@@ -383,7 +541,45 @@ export const menuItems: MenuItem[] = [
     restaurantId: "Kerala Cusine Hut"
   },
 
-  // 4. Majlis Restaurent & Cafe - 10 Items
+  // 4. Majlis Restaurent & Cafe (Dragon Wok items)
+  {
+    id: "dw-1",
+    name: "Hakka Noodles",
+    description: "Stir-fried noodles with vegetables and soy sauce",
+    price: 189,
+    category: "Noodles",
+    image: hakkaNoodles,
+    restaurantId: "Majlis Restaurent & Cafe"
+  },
+  {
+    id: "dw-2",
+    name: "Manchurian",
+    description: "Deep-fried vegetable balls in tangy sauce",
+    price: 169,
+    category: "Starters",
+    image: placeholderImage,
+    restaurantId: "Majlis Restaurent & Cafe"
+  },
+  {
+    id: "dw-3",
+    name: "Fried Rice",
+    description: "Wok-tossed rice with vegetables and eggs",
+    price: 179,
+    category: "Rice",
+    image: pp13,
+    restaurantId: "Majlis Restaurent & Cafe"
+  },
+  {
+    id: "dw-4",
+    name: "Spring Rolls",
+    description: "Crispy rolls stuffed with vegetables",
+    price: 129,
+    category: "Starters",
+    image: placeholderImage,
+    restaurantId: "Majlis Restaurent & Cafe"
+  },
+
+  // 4. Majlis Restaurent & Cafe - Additional Items
   {
     id: "majlis-1",
     name: "Chicken Mandi",
@@ -475,7 +671,45 @@ export const menuItems: MenuItem[] = [
     restaurantId: "Majlis Restaurent & Cafe"
   },
 
-  // 5. Flame & Flavour - 10 Items
+  // 5. Flame & Flavour (Sweet Treats items)
+  {
+    id: "st-1",
+    name: "Chocolate Brownie",
+    description: "Warm brownie with vanilla ice cream",
+    price: 129,
+    category: "Desserts",
+    image: chocolateBrownie,
+    restaurantId: "Flame & Flavour"
+  },
+  {
+    id: "st-2",
+    name: "Gulab Jamun",
+    description: "Traditional Indian sweet (2 pieces)",
+    price: 79,
+    category: "Desserts",
+    image: pp8,
+    restaurantId: "Flame & Flavour"
+  },
+  {
+    id: "st-3",
+    name: "Chocolate Shake",
+    description: "Thick chocolate milkshake with whipped cream",
+    price: 119,
+    category: "Shakes",
+    image: placeholderImage,
+    restaurantId: "Flame & Flavour"
+  },
+  {
+    id: "st-4",
+    name: "Red Velvet Cake",
+    description: "Slice of rich red velvet with cream cheese frosting",
+    price: 149,
+    category: "Cakes",
+    image: placeholderImage,
+    restaurantId: "Flame & Flavour"
+  },
+
+  // 5. Flame & Flavour - Additional Items
   {
     id: "flame-1",
     name: "Flame Grilled Chicken (Quarter)",
@@ -567,7 +801,45 @@ export const menuItems: MenuItem[] = [
     restaurantId: "Flame & Flavour"
   },
 
-  // 6. The Urban Oven - 10 Items
+  // 6. The Urban Oven (Cafe Mocha items)
+  {
+    id: "cm-1",
+    name: "Cappuccino",
+    description: "Espresso with steamed milk and foam",
+    price: 129,
+    category: "Coffee",
+    image: cappuccino,
+    restaurantId: "The Urban Oven"
+  },
+  {
+    id: "cm-2",
+    name: "Iced Coffee",
+    description: "Cold brew coffee with ice and milk",
+    price: 99,
+    category: "Coffee",
+    image: placeholderImage,
+    restaurantId: "The Urban Oven"
+  },
+  {
+    id: "cm-3",
+    name: "Fresh Lime Soda",
+    description: "Refreshing lime soda with mint",
+    price: 69,
+    category: "Beverages",
+    image: placeholderImage,
+    restaurantId: "The Urban Oven"
+  },
+  {
+    id: "cm-4",
+    name: "Sandwich",
+    description: "Grilled vegetable sandwich with cheese",
+    price: 139,
+    category: "Snacks",
+    image: placeholderImage,
+    restaurantId: "The Urban Oven"
+  },
+
+  // 6. The Urban Oven - Additional Items
   {
     id: "urban-1",
     name: "Urban Special Pizza",

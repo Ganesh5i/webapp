@@ -50,7 +50,7 @@ const Index = () => {
                 <Utensils className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="font-display text-2xl font-bold text-foreground">ZenBite</h1>
+                <h1 className="font-display text-2xl font-bold text-foreground">Unieats</h1>
                 <p className="text-xs text-muted-foreground">Delicious food delivered</p>
               </div>
             </div>
@@ -166,7 +166,7 @@ const Index = () => {
       <footer className="bg-card border-t border-border mt-20">
         <div className="container mx-auto px-4 py-8 text-center">
           <p className="text-muted-foreground">
-            © 2025 ZenBite. Serving delicious food with love.
+            © 2025 Unieats. Serving delicious food with love.
           </p>
         </div>
       </footer>
